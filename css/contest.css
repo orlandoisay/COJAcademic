@@ -1,0 +1,98 @@
+/* Scoreboard */
+
+.contest-name {
+	margin-top: 20px;
+	text-align: left;
+}
+
+.scoreboard {
+	width: 720px;
+}
+
+.scoreboard-table {
+	width: 100%;
+	border-spacing: 0 3px;
+}
+
+.scoreboard-table tr.scoreboard-table-header {
+	background: #30527E;
+}
+
+.main {
+	display: none;	
+}
+
+.scoreboard-table tr th {
+	color: #FFF;
+	padding: 10px;
+}
+
+.scoreboard-table tr th a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.scoreboard-table tr td {
+	background: rgba(255,255,255,0.1);
+	padding: 10px;	
+}
+
+.scoreboard-table tr td.ac {
+	font-weight: 700;
+	background: rgb(3,169,244);
+}
+
+.scoreboard-table tr td.first-ac-problem { background: rgb(103,58,183); }
+.scoreboard-table tr td.first-ac-contest { background: rgb(255,152,0); }
+
+/* Sidebar */
+
+.sidebar {
+	width: 240px;
+}
+
+.clock { text-align: right; visibility: hidden; }
+
+.clock h1 { font-size: 52px; color: #2F2F2F; text-shadow: 0 0 5px 5px rgb(0,0,0);}
+
+.top-three, .fastest { 
+	margin: 5px; 
+	text-align: right;
+}
+
+.top-three h1, .fastest h1 {
+	font-size: 24px;
+	font-weight: 400;
+	margin-bottom: 5px;
+	color: #EFEFEF;
+}
+
+.top-three div, .fastest div{	
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	margin-bottom: 5px;
+}
+
+.top-three div img, .fastest div img {
+	width: 40px;
+	height: 40px;
+	margin-left: 5px;
+	border: 4px solid #30527E;
+}
+
+.top-three div h2, .fastest div h2 {
+	font-size: 18px;
+}
+
+.top-three .first-place { background: linear-gradient(to left,rgba(255, 193, 7,1),rgba(255, 193, 7,0)); color: #7F6003;}
+.top-three .first-place img { border-color: #E5AE06; }
+
+.top-three .second-place { background: linear-gradient(to left,rgba(158, 158, 158,1),rgba(158, 158, 158,0)); color: #404040;}
+.top-three .second-place img { border-color: #9E9E9E; }
+
+.top-three .third-place { background: linear-gradient(to left,rgba(121, 85, 72,1),rgba(121, 85, 72,0)); color: #402D26;}
+.top-three .third-place img { border-color: #795548; }
+
+.fastest .fastest-place {background: linear-gradient(to left,#30527E,rgba(121, 85, 72,0)); color: #182940;}
+.top-three .third-place img { border-color: #795548; }

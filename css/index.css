@@ -1,0 +1,92 @@
+/* Scoreboard */
+
+.current-contests h1 {
+	margin-top: 20px;
+	text-align: left;
+}
+
+.contests {
+	width: 720px;
+}
+
+.contests-table {
+	width: 100%;
+	border-spacing: 0 3px;
+}
+
+.contests-table tr.contests-table-header {
+	background: #30527E;
+}
+
+
+.contests-table tr th {
+	color: #FFF;
+	padding: 10px;
+}
+
+.contests-table tr th a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.contests-table tr td {
+	background: rgba(255,255,255,0.1);
+}
+
+.contests-table tr td a {
+	display: block;
+	margin: 4px auto;
+
+	width: 90%;
+	background: #20426E;
+	color: rgb(255,255,255);
+	text-decoration: none;
+	border-radius: 2px;
+	
+	padding: 10px 0;
+
+	transition: all 0.2s ease-out;	
+	-moz-transition: all 0.2s ease-out;	
+}
+
+.contests-table tr td a:hover {
+	background: #153D6A;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+	width: 240px;
+	margin-top: 10px;
+}
+
+input[type="text"], input[type="password"] {
+	display: block;
+	margin: auto;
+	padding: 5px;
+}
+input[type="submit"] {
+	margin-top: 2px;
+	padding: 7px;
+	color: rgb(255,255,255);
+	background: #20426E;
+	border: 0;
+	border-radius: 2px;
+}
+
+/* Menu */
+
+.menu {
+	width: 720px;	
+	text-align: left;
+}
+
+.menu a {
+	display: inline-block;
+	color: #FFFFFF;
+	background: #20426E;
+	text-decoration: none;
+	padding: 7px;
+	border-radius: 2px;
+}

@@ -1,0 +1,16 @@
+[Object] Contestant
+
+Properties:
+   
+ - user: [String] The username that the contestant has on COJ.
+
+ - submissions: [Array: Array: Number] It's an array of length N, where N is equal to the
+   number of problems in the contest. The i-th position contains an array S of length 2.
+   S[0] stores the difference of the datetime of the first AC-submission for the i-th
+   problem minus the datetiem of the start of the contest. If there's no AC-submission
+   S[0] is set to -1. S[1] stores the number of submissions to the i-th problem.
+
+ - score: [Object] Store the score of the contestant.
+    = pts: [Number] The number of problems solved.
+    = penalty: [Number] The penalty. It's calculated taking into account the values stored
+      in 'submissions'.

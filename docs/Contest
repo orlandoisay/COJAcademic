@@ -1,0 +1,27 @@
+[Object] Contest
+
+Properties:
+ 
+ - name: [String] The name of the contest.
+
+ - start: [DateTime] When does the contest will start.
+
+ - end: [DateTime] When does the contest will end.
+
+ - lastUpdate: [DateTime] The last moment on which the contest has been updated.
+   When created it's set equal to 'start'. Then is updated every certain period of time.
+   It's used to know when is needed to connect to the COJ API to fetch data.
+
+ - penaltyPerMin: [Number] It's used in the calculation of the score. When a contestant
+   make an AC-submission the number of minutes from the start of the contest is
+   multiplied by this, and the result is added to the penalty of the contestant.
+   *** Currently it's always set to 1.
+
+ - penaltyPerWA: [Number] It's used in the calculation of the score. When a contestant
+   make a AC-submission the number of WA-submissions ismultiplied by this, and the
+   result is added to the penalty of the contestant.
+   *** Currently it's always set to 20.
+
+ - problems: [Array: Number] A list of the id of the problems in the contest.
+
+ - contestants: [Array: Contestant] A list of the contestants.

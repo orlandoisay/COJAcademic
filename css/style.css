@@ -1,0 +1,58 @@
+/* Fonts */
+@font-face {
+    font-family: 'Lato';
+    font-weight: 300;
+    src: url('../res/fonts/lato300.ttf');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-weight: 400;
+    src: url('../res/fonts/lato400.ttf');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-weight: 700;
+    src: url('../res/fonts/lato700.ttf');
+}
+
+/* Page*/
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {	
+	height: 100%;	
+}
+
+body {
+	background: linear-gradient(#4C83C3,#3F51B5);
+	text-align: center;
+
+	font-family: 'Lato';
+}
+
+.wrapper {
+	margin: 15px auto;
+	width: 960px;	
+}
+
+.title {
+	text-align: left;
+	border-radius: 5px;
+	font-weight: 300;
+	font-size: 42px;
+	color: #EFEFEF;
+}
+
+.title b {
+	color: #2F2F2F;
+	font-weight: 700;
+}
+
+.main {
+	display: flex;
+}
