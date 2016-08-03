@@ -8,7 +8,10 @@
 </head>
 <body>
 	<div class="wrapper">
-		<h1 class="title"><b>COJ</b> ACADEMIC | Concurso</h1>	
+		<?php 
+			require_once('header.php');
+			head("Concurso");
+		?>
 		<div class="main">			
 			<div class="scoreboard">
 				<h1 class="contest-name"><?php echo $_GET['id']; ?></h1>

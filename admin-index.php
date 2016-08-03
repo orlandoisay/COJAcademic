@@ -24,51 +24,42 @@
 	<title>COJ ACADEMIC | Contest view</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src="js/admin-index.js"></script>
 </head>
 <body>
 	<div class="wrapper">
-		<h1 class="title"><b>COJ</b> ACADEMIC | Administraci&oacute;n de concursos</h1>	
+		<?php 
+			require_once('header.php');
+			head("Administraci&oacute;n de concursos");
+		?>
 		<div class="main">			
 			<div class="contests">
 				<div class="menu">
-					<a href="#">Nuevo</a>
-					<a href="#">Editar</a>
+					<a id="new-contest" href="create-contest.php">Nuevo</a>
+					<a id="edit-contest" href="#">Editar</a>
 				</div>
 				<table class="contests-table">
 					<tr class="contests-table-header">
-						<th width="68%">Concurso</th>
-						<th width="10%">Inicio</th>
-						<th width="10%">Fin</th>
-						<th width="12%"></th>
+						<th></th>
+						<th width="80%">Concurso</th>
+						<th width="10%">Scoreboard</th>
 					</tr>
 					<?php while($row = $result->fetch_array()):?>
 					<tr>
 						<?php $data = json_decode($row[1]); ?>
-						
+						<td>
+							<input class="sel" type="radio" name="sel" value="<?php echo $row[0]; ?>">
+							<label for="option"></label>
+						</td>
 						<td><?php echo $data->name; ?></td>
-						<td><?php echo dFormat($data->start); ?></td>
-						<td><?php echo dFormat($data->end); ?></td>
-						<td><a href="contest.php?id=<?php echo $row[0]; ?>">Ver</a></td>
+						<td><a href="contest.php?id=<?php echo $row[0]; ?>">Ir</a></td>
 					</tr>
 					<?php endwhile; ?>
 				</table>
 			</div>
-			<div class="sidebar">
-				<?php if(!isset($_SESSION["user"])): ?>
-				<h2>Iniciar sesi&oacute;n</h2>
-				<form name="login" method="POST" action="login.php">
-					<input type="text" name="user" placeholder="Usuario">
-					<input type="password" name="pass" placeholder="Contrase&ntilde;a">
-					<input type="submit" value="Entrar">
-				</form>
-				<?php else: ?>
-				<h2>Cuenta</h2>
-				<p>Bienvenido <b><?php echo $_SESSION["user"]; ?></b>.</p>
-				<a href="admin-index.php">Administrar concursos</a>
-				<?php endif; ?>
-			</div>
+			<?php require_once('sidebar.php'); ?>
 		</div>
 	</div>
-	
+	<?php require_once('footer.php'); ?>
 </body>
 </html>

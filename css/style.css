@@ -38,6 +38,11 @@ body {
 .wrapper {
 	margin: 15px auto;
 	width: 960px;	
+	min-height: 620px;
+}
+
+a {
+	text-decoration: none;
 }
 
 .title {
@@ -46,6 +51,7 @@ body {
 	font-weight: 300;
 	font-size: 42px;
 	color: #EFEFEF;
+	margin-bottom: 20px;
 }
 
 .title b {
@@ -55,4 +61,28 @@ body {
 
 .main {
 	display: flex;
+}
+
+
+/* Footer */
+
+footer {
+	width: 960px;
+	margin: auto;
+	color: #182940;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+footer a {
+	text-decoration: none;
+	color: #182940;
+}
+
+footer .left {
+	float: left;
+}
+
+footer .right {
+	float: right;
 }

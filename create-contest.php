@@ -1,3 +1,13 @@
+<?php
+
+	session_start();
+
+	if(!isset($_SESSION["user"])) {
+		header("Location: index.php");
+		return;
+	}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +18,10 @@
 </head>
 <body>
 	<div class="wrapper">
-		<h1 class="title"><b>COJ</b> ACADEMIC | Crear concurso</h1>	
+		<?php 
+			require_once('header.php');
+			head("Crear concurso");
+		?>
 		<div class="main">		
 			<table>
 				<tr>
@@ -28,14 +41,14 @@
 				<tr>
 					<td>
 						<label>Inicio: </label><br>
-						<input type="datetime-local" id="contest-start-date">
+						<input type="text" id="contest-start-date">
 						<p>
 							Hora local (YYYY-MM-DD hh:mm:ss).
 						</p>
 					</td>
 					<td>
 						<label>Fin: </label><br>
-						<input type="datetime-local" id="contest-end-date">
+						<input type="text" id="contest-end-date">
 						<p>
 							Hora local (YYYY-MM-DD hh:mm:ss).
 						</p>

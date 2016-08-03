@@ -16,6 +16,6 @@
 	define('DB_USER', 'root');
 
 	/* Contrasena de la base de datos */
-	define('DB_PASS', 'pass');
+	define('DB_PASS', '');
 
 ?>
